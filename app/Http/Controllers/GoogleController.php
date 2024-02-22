@@ -31,8 +31,7 @@ class GoogleController extends Controller
                 Auth::login($authUser);
                 return redirect()->intended('/home');
             }
-
-            // Or you can create a new user
+            
             $newUser = User::create([
                 'name' => $user->name,
                 'email' => $user->email,
